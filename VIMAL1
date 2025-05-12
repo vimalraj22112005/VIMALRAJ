@@ -1,0 +1,3 @@
+from nltk.stem import PorterStemmer
+stemmer = PorterStemmer()
+df['tokens'] = df['tokens'].apply(lambda x: [stemmer.stem(word) for word in x])
